@@ -1,0 +1,161 @@
+/* tag de bloco (block)- ACEITAM definicaco altura e largura -dimensões- <h1></h1>
+tag de linha (inline) - NAO ACEITAM definicaco altura e largura -dimensões- <a></a>*/
+
+div {
+   /* border: 1px solid;*/
+}
+
+body{
+    font-family: Arial, verdana, tahoma;
+    font-size: 100%; /*16px = 100% = em é p padrão em eh fonte escalonável*/
+    line-height: 1.5; /*altura linh , se eu coloco 1 -> 16px * 2 =32 px*/
+}
+
+.site-container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-header {
+
+    /* background-color:silver; */
+    height: auto; /*unidade preferida px*/
+
+}
+    .site-header__logo a {
+        /*background-color: cyan;*/
+        background-image: url(../img/ford-logo.png); /* ../ volta um nivel de pasta!  se colocar ../../ volta dois*/
+        background-repeat: no-repeat; /*nao repete se aumentar o tamanh do lugar*/
+        /* background-position: 75px a partir da esquerda empurra 75px;*/
+        background-position: center center;
+        /* background-position: center top 20px ele em cima fica 20; */
+        background-size: 90%;
+        width: 155px;
+        height: 100px;
+        display: block; /* display inline nao conversa com altura e largura fica riscado em baixo*/
+        /*font-size: 0; o texto esta la mas tirao tamanho*/
+        text-indent: -9000px; /*empurra o texto*/
+        
+    }
+    .site-header__navbar ul li { /*aqui estou dizendo que aplique as definições nas tags que falei no caso ul e li*/
+       /* border: 1px solid black;  essa boda conta na hora de quebrar o layout seia 198 width, agora sem 200 */
+       /* pegou a linha inteira com a borda eh bloco */
+       width: 200px;
+       display: block;
+       text-align: center;
+       float: left;
+       line-height: 2;
+       /*  background-color: black;
+       color: white;tag "a" nao acata as caracteristicas de cor e text decoration*/
+    }
+    .site-header__navbar a {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        display: inherit;
+      }
+    .site-header__navbar a:hover, 
+    .site-header__navbar a.active {
+        background-color:steelblue;
+        color:black;
+    
+    
+    }
+
+    /*.site-header__navbar ul li a {
+        color: inherit; /*tag a nao acata as caracteristicas e propriedades, de cor e text decoration e display nao aceita herança desses 3 por isso colocamos aqui.
+        INHERIT eh uma forma de forçar a heranca la de cima. Nao pega a cor que coloca no pai tivemos q colocar o a la em cima juntamente com ul e li */
+        /* text-decoration: inherit;  risquinho em baixo ou características do link*/
+        /*background-color: salmon;
+        display: inherit;
+    }*/
+
+.site-main {
+    background-color: whitesmoke;
+    height: auto;
+}
+    .site-main__highlight{
+        display: block; /* eh redundancia o display ja eh em bloco */
+    }
+        .highlight{
+            /*border: 2px red;*/
+            border: 2px red;
+            position: relative;
+        }
+        .highlight__image{
+            display: block;
+        }
+
+        .highlight__title{
+            font-size: 2.5em;
+            background-color: rgba(0, 0, 0, 0.7); /*o ultimo elemento eh a opacidade, no caso 0.5 no fundo e nao as letras*/
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            color: #ffffff;
+            position:absolute; /* fixo na tela se diminuir a janela fica fixo. referencia eh a janela do navegador. segue 4 coordenadas norte sul leste oeste. 4 novas propriedades sao habilitadas top bottom left right e determino onde quer q ele apareça no top: ... px e outros*/ 
+            right: 16px;
+            bottom: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            opacity: 1;
+            visibility: visible;
+            /*opacity: 0.5; ele dá opacidade em tudo
+            visibility: hidden; esconde o elemento*/
+            
+
+        }
+
+    
+    .site-main__posts{
+       /* background-color: salmon;*/
+        min-height: 700px;
+        width: 1000px; /*usamos o border box do irish google por isso nao quebra esta no arquivo reset do cssq criamos*/
+        float: left;
+        padding: 16px /*top right bottom left*/
+    }
+
+    .post{
+        /*border: 2px solid;
+          padding: 2px; */
+        margin-bottom: 36px; /*margin eh espaçamento por fora*/
+    }
+
+        .post__title{
+            font-size: 2em;
+        }
+        .post__resume{
+            font-size: 1.1em;
+            margin: 8px 16px;
+        }
+        .post__read-more a {
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px;
+        }
+        .post__read-more a:hover {
+            background-color: steelblue;
+            color: black;
+
+
+
+        }
+
+
+    
+    .site-main__sidebar{
+        background-color:#dadada;
+        min-height: 1000px;
+        width: 200px;
+        float: right;
+        padding: 16px;
+    }
+
+.site-footer {
+    background-color: silver;
+    height: 150px;
+}

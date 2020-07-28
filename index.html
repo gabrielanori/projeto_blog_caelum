@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog da Ford</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <!--primeiro limpa com o primeiro arq reset depois aplica o pessoal-->
+    <link rel="stylesheet" href="css/blog.css" />
+  </head>
+  <body>
+    <div class="site-container">
+      <header class="site-header">
+        <h1 class="site-header__logo">
+          <a href="index.html"> Ford Go Further</a>
+        </h1>
+        <nav class="site-header__navbar">
+          <ul class="menu clearfix">
+            <li><a href="#" class="active">Veículos</a></li>
+            <li><a href="#">Compre o seu</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Financiamento</a></li>
+            <li><a href="#">Venda Direta</a></li>
+            <li><a href="#">Ofertas</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="site-main clearfix">
+        <!-- coloquei o clear fix para poder ajustar o float com isso arruma-->
+        <section role="highlight" class="site-main__highlight">
+          <!--role especifica as sections ajuda na indexação que cada secao faz uma coisa diferente-->
+          <figure class="highlight">
+            <img src="img/foto3.jpg" alt="SUV Ford" class="highlight__image" />
+            <figcaption class="highlight__title">
+              A Família de SUVs da Ford esta crescendo
+            </figcaption>
+            <!-- figcaption serve para explicar o que tem na foto-->
+          </figure>
+        </section>
+        <section role="posts" class="site-main__posts">
+          <!--se dou article*5>h1 article*5>h1{Título do Post}+p  ele cria 5 tags articla com h1 dentroja article*5>h1{Título do Post}+p>lorem^p>a{Leia mais..}article.post*5>h1{Título do Post}+p>lorem^p>a{Leia mais..}
+            ultimo feito
+        article.post*5>h1.post__title{Título do Post}+p.post__resume>lorem^p.post__read-more>a{Leia mais...}
+-->
+          <article class="post">
+            <h1 class="post__title">Título do Post</h1>
+            <p class="post__resume">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium illo exercitationem omnis quae tempora ullam similique
+              reiciendis at ipsum distinctio tenetur nesciunt placeat,
+              asperiores fuga, porro assumenda nulla excepturi accusantium.
+            </p>
+            <p class="post__read-more"><a href="">Leia mais..</a></p>
+          </article>
+          <article class="post">
+            <h1 class="post__title">Título do Post</h1>
+            <p class="post__resume">
+              Fuga sit cumque sunt eum eos odit ex voluptatem quae repudiandae
+              et, voluptates itaque recusandae a incidunt vero eligendi
+              perspiciatis deserunt modi. Necessitatibus temporibus dolorem
+              debitis mollitia animi quidem ad.
+            </p>
+            <p class="post__read-more"><a href="">Leia mais..</a></p>
+          </article>
+          <article class="post">
+            <h1 class="post__title">Título do Post</h1>
+            <p class="post__resume">
+              Labore culpa nesciunt earum corrupti repellendus, eum deserunt
+              adipisci ad optio accusamus amet excepturi, vitae doloremque ipsam
+              deleniti praesentium enim provident dolor suscipit fuga debitis
+              rerum! Illum ea magnam maxime.
+            </p>
+            <p class="post__read-more"><a href="">Leia mais..</a></p>
+          </article>
+          <article class="post">
+            <h1 class="post__title">Título do Post</h1>
+            <p class="post__resume">
+              Aliquid explicabo blanditiis modi, rerum id repellendus a sapiente
+              magni libero dolore corrupti adipisci! Dignissimos voluptas sunt
+              ipsum iure porro! Perspiciatis deleniti expedita odit eos maiores
+              at itaque mollitia aspernatur.
+            </p>
+            <p class="post__read-more"><a href="">Leia mais..</a></p>
+          </article>
+          <article class="post">
+            <h1 class="post__title">Título do Post</h1>
+            <p class="post__resume">
+              Quis facere omnis molestiae itaque inventore aliquam sapiente est,
+              odit amet, distinctio assumenda quas quidem soluta aut nisi rem
+              eius repudiandae officiis ducimus. Laboriosam veritatis, corporis
+              minima omnis officia numquam.
+            </p>
+            <p class="post__read-more"><a href="">Leia mais..</a></p>
+          </article>
+        </section>
+        <section role="sidebar" class="site-main__sidebar">
+            <!--nav>ul>li*5>a{post $}-->
+          <nav>
+              <h1>Últimos Posts</h1>
+            <ul>
+              <li><a href="">post 1</a></li>
+              <li><a href="">post 2</a></li>
+              <li><a href="">post 3</a></li>
+              <li><a href="">post 4</a></li>
+              <li><a href="">post 5</a></li>
+            </ul>
+          </nav>
+        </section>
+      </main>
+      <footer class="site-footer">
+          <p>&copy; - Ford - direitos reservados</p>
+          <nav>
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">LinkedIn</a>
+
+          </nav>
+      </footer>
+    </div>
+  </body>
+</html>
